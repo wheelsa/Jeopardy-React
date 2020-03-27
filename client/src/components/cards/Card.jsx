@@ -1,6 +1,8 @@
 import React, { useState, useEffect} from 'react'
 import axios from 'axios'
 
+import './card.styles.scss'
+
 const Card = (props) => {
   const [card, setCard] = useState([])
   const {groupID} = props
