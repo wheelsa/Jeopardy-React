@@ -1,5 +1,6 @@
 class Api::GroupsController < ApplicationController
   def index
+    render json: Group.all
   end
 
   def show

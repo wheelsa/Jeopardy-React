@@ -10,18 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_26_204927) do
+ActiveRecord::Schema.define(version: 2020_03_27_144251) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "cards", force: :cascade do |t|
     t.string "question"
-    t.string "answer"
     t.string "points"
     t.bigint "group_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "answer1"
+    t.string "answer2"
+    t.string "answer3"
+    t.string "answer4"
+    t.string "correctAnswer"
+    t.string "score"
     t.index ["group_id"], name: "index_cards_on_group_id"
   end
 
