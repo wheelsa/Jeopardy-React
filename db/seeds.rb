@@ -14,35 +14,114 @@ Group.create(name: 'React 101')
       answer2: 'Test',
       answer3: 'Initialization, State/Property Update, Destruction',
       answer4: 'Test',
-      score: '200')
+      score: '100')
 
-Group.create(name: 'React 201')
+      Group.first.cards.create(
+      question: ' React 102?',
+      correctAnswer: 'React 102',
+      answer1: 'Test',
+      answer2: 'Test',
+      answer3: 'React 2',
+      answer4: 'Test',
+      score: '200')
+      
+      Group.first.cards.create(
+        question: ' React 102?',
+        correctAnswer: 'React 102',
+        answer1: 'Test',
+        answer2: 'Test',
+        answer3: 'React 2',
+        answer4: 'Test',
+        score: '300')
+
+      Group.first.cards.create(
+        question: ' React 102?',
+        correctAnswer: 'React 102',
+        answer1: 'Test',
+        answer2: 'Test',
+        answer3: 'React 2',
+        answer4: 'Test',
+        score: '400')
+
+    Group.first.cards.create(
+      question: ' React 102?',
+      correctAnswer: 'React 102',
+      answer1: 'Test',
+      answer2: 'Test',
+      answer3: 'React 2',
+      answer4: 'Test',
+      score: '500')
+
+Group.create(name: 'React 200')
   Group.second.cards.create(
-    question: ' React components have lifecycle events that fall into three general categories?',
-    correctAnswer: 'Initialization, State/Property Update, Destruction',
+    question: 'React 201?',
+    correctAnswer: 'React 201',
     answer1: 'Test',
     answer2: 'Test',
-    answer3: 'Initialization, State/Property Update, Destruction',
+    answer3: 'React 201',
     answer4: 'Test',
-    score: '200')
+      score: '100'
+      )
+
+  Group.second.cards.create(
+    question: 'React 201?',
+    correctAnswer: 'React 201',
+    answer1: 'Test',
+    answer2: 'Test',
+    answer3: 'React 201',
+    answer4: 'Test',
+      score: '200'
+      )
+  
+  Group.second.cards.create(
+    question: 'React 201?',
+    correctAnswer: 'React 201',
+    answer1: 'Test',
+    answer2: 'Test',
+    answer3: 'React 201',
+    answer4: 'Test',
+      score: '300'
+      )
+  Group.second.cards.create(
+    question: 'React 201?',
+    correctAnswer: 'React 201',
+    answer1: 'Test',
+    answer2: 'Test',
+    answer3: 'React 201',
+    answer4: 'Test',
+      score: '400'
+      )
+  
+  Group.second.cards.create(
+        question: 'React 201?',
+        correctAnswer: 'React 201',
+        answer1: 'Test',
+        answer2: 'Test',
+        answer3: 'React 201',
+        answer4: 'Test',
+          score: '500'
+          )
+        
+
+
 Group.create(name: 'Javascript')
   Group.third.cards.create(
-    question: ' React components have lifecycle events that fall into three general categories?',
-    correctAnswer: 'Initialization, State/Property Update, Destruction',
+    question: 'Javascript?',
+    correctAnswer: 'Javascript ELITE',
     answer1: 'Test',
     answer2: 'Test',
-    answer3: 'Initialization, State/Property Update, Destruction',
+    answer3: 'Javascript ELITE',
     answer4: 'Test',
-    score: '200')
+    score: '500')
 Group.create(name: 'WildCard')
   Group.fourth.cards.create(
-    question: ' React components have lifecycle events that fall into three general categories?',
-    correctAnswer: 'Initialization, State/Property Update, Destruction',
+    question: ' Wildcard ??? ',
+    correctAnswer: 'Wildcard!?@#$',
     answer1: 'Test',
     answer2: 'Test',
-    answer3: 'Initialization, State/Property Update, Destruction',
+    answer3: 'Wildcard!?@#$',
     answer4: 'Test',
-    score: '200')
+    score: '300')
 
-puts 'groups seeded'
+puts 'groups and cards seeded'
 

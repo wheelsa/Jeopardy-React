@@ -1,15 +1,15 @@
 import React, { useState, useEffect} from 'react';
 import axios from 'axios';
 
-import './header.styles.scss';
-import Card from './cards/Card';
+import './home.styles.scss';
+import Card from '../components/cards/Card';
 
-const Header = () => {
-  const [category, setCategory] = useState([])
+const Home = () => {
+  const [group, setGroup] = useState([])
   
   useEffect( ()=> {
     axios.get('api/groups').then(res => {
-      setCategory(res.data)
+      setGroup(res.data)
     }).catch(err => {
       console.log(err)
     })
@@ -18,7 +18,7 @@ const Header = () => {
     const groups = () => {
         return (
         <>
-          {category.map( group => (
+          {group.map( group => (
             <div className="header-block" key={group.id}> 
               <span> {group.name} </span>
               <Card groupID = {group.id }/>
@@ -40,4 +40,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default Home

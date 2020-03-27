@@ -10,6 +10,12 @@ class Api::CardsController < ApplicationController
     render json: group.cards.create(card_params)
   end
 
+  def show
+    group = Group.find(params[:group_id])
+    render json: group.cards.find(params[:id])
+
+  end 
+
   def update
   end
 
@@ -19,6 +25,6 @@ class Api::CardsController < ApplicationController
 
   private 
   def card_params
-    params.require(:card).permit(:question, :score, :answer1, :answer2, :answer3, :answer4, :correctAnswer)
+    params.require(:card).permit(:question, :score, :answer1, :answer2, :answer3, :answer4, :correctAnswer, :id, :group_id)
   end 
 end
