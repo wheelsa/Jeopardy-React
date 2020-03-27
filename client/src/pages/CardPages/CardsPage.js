@@ -7,6 +7,7 @@
   const CardsPage = (props) => {
 
   const [cards, setCards] = useState([])
+  const [cardAnswers, setCardAnswers] = useState(false)
   
   const groupID = props.match.params.group_id
   // const ID = props.match.params.id
@@ -18,25 +19,25 @@
         console.log(err)
       })
     }, [])
+
+    const cardFlip = () => {
+      if(cardAnswers === true){ 
+        cards.map( card => (
+         <Card key={`cards-${card.id}`}> 
+           <Card.Content> 
+             <Card.Header> 
+             { card.question }
+             </Card.Header>
+           </Card.Content>
+         </Card>   
+         )
+       ) }
+    }
     
   return (
-        cards.map( card => (
-          <Card key={`cards-${card.id}`}> 
-            <Card.Content> 
-              <Card.Header> 
-              { card.question }
-              </Card.Header>
-            </Card.Content>
-
-            {/* <Button as={Link} to={`/groups/${group.id}`} color='blue'> 
-              View
-            </Button> */}
-
-          </Card>
-              
-          )
-
-        ))
+          <>
+          </>
+      )
     }
 
     export default CardsPage

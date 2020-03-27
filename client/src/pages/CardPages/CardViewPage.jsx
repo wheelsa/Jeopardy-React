@@ -1,15 +1,19 @@
 import React, {useState,useEffect} from "react"
 import axios from 'axios'
 
-import { Button, Header, Segment} from 'semantic-ui-react'
+import { Button, Radio, Segment, Card, Form} from 'semantic-ui-react'
 
 const CardViewPage = (props) => {
 
   const [card, setCard] = useState({})
-  
+  const [value, setValue] = useState('')
+  const [cardAnswers, setCardAnswers] = useState(false)
+
+
+
   const groupID = props.match.params.group_id
   const id = props.match.params.id
-  const {answer1, answer2, answer3, answer4} = card
+  const {answer1, answer2, answer3, answer4, question} = card
 
     useEffect( ()=> {
       axios.get(`/api/groups/${groupID}/cards/${id}`).then(res => {
@@ -19,22 +23,69 @@ const CardViewPage = (props) => {
       })
     }, [])
 
+    const handleChange = (e, { value }) => setValue(value)
+ 
+    const cardFlip = () => {
+      
+      if(cardAnswers === false){ 
+        return (
+        <>
+         <Card key={`cards-${card.id}`}> 
+           <Card.Content> 
+             <Card.Header> 
+             { question }
+             </Card.Header>
+           </Card.Content>
+         </Card>   
+        </>)
+        }
+      else {
+        return (
+        <>
+            <Form>
+            <Form.Field>
+              Selected answer: <b>{value}</b>
+            </Form.Field>
+            <Form.Field>
+              <Radio
+                label={`${answer1}`}
+                name='answersGroup'
+                value={`${answer1}`}
+                checked= {value === `${answer1}`}
+                onChange={handleChange}
+              />
+            </Form.Field>
+            <Form.Field>
+              <Radio
+                label={`${answer3}`}
+                name='radioGroup'
+                value={`${answer3}`}
+                checked={value === `${answer3}`}
+                onChange={handleChange}
+              />
+            </Form.Field>
+          </Form>
+        </> )
+      }
+    }
+
+    const flipAnswers = () =>{
+      setCardAnswers(!cardAnswers)
+    }
+    
+
   
 
   return(
     <>
     <Segment>
-      <Header as="h3">{ answer1 }</Header>
-      <Header as="h3">{ answer2 }</Header>
-      <Header as="h3">{ answer3 }</Header>
-      <Header as="h3">{ answer4 }</Header>
+    {cardFlip()}
     </Segment>
-
 
     <Button 
       color="blue"
-      onClick={props.history.goBack}>
-        Back
+      onClick={flipAnswers}>
+        Flip
     </Button>
     </>
   )
