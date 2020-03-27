@@ -1,9 +1,6 @@
 import React, { useState, useEffect} from 'react'
 import axios from 'axios'
-
 import './card.styles.scss'
-
-import RenderAnswers from '../RenderAnswers/RenderAnswers'
 
 const Card = (props) => {
   const [cards, setCards] = useState([])

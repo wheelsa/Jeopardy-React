@@ -2,7 +2,8 @@ import React, { useState, useEffect} from 'react';
 import axios from 'axios';
 
 import './home.styles.scss';
-import Card from '../components/cards/Card';
+import Card from '../components/card/Card';
+
 
 const Home = () => {
   const [group, setGroup] = useState([])
@@ -23,6 +24,7 @@ const Home = () => {
               <span> {group.name} </span>
               <Card groupID = {group.id }/>
             </div>
+      
           ))}
         </>
         )
