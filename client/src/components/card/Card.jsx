@@ -3,14 +3,16 @@ import axios from 'axios'
 
 import './card.styles.scss'
 
+import RenderAnswers from '../RenderAnswers/RenderAnswers'
+
 const Card = (props) => {
-  const [card, setCard] = useState([])
+  const [cards, setCards] = useState([])
   const {groupID} = props
 
   useEffect( () => {
-    axios.get(`/api/groups/${groupID}/cards`,).then( res => {
+    axios.get(`/api/groups/${groupID}/cards/`,).then( res => {
       console.log(res.data)
-      setCard(res.data)
+      setCards(res.data)
     })
   }, [])
 
@@ -18,7 +20,7 @@ const Card = (props) => {
 
       return (
       <>
-        {card.map( card =>(
+        {cards.map( card =>(
           <div className="card" key={card.id}>
             <div className="container">
               <h1> {card.score} </h1>

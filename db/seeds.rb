@@ -14,7 +14,7 @@ Group.create(name: 'React 101')
       answer2: 'Test',
       answer3: 'Initialization, State/Property Update, Destruction',
       answer4: 'Test',
-      score: '150')
+      score: '100')
 
       Group.first.cards.create(
       question: ' React 102?',
@@ -23,7 +23,34 @@ Group.create(name: 'React 101')
       answer2: 'Test',
       answer3: 'React 2',
       answer4: 'Test',
-      score: '100')
+      score: '200')
+      
+      Group.first.cards.create(
+        question: ' React 102?',
+        correctAnswer: 'React 102',
+        answer1: 'Test',
+        answer2: 'Test',
+        answer3: 'React 2',
+        answer4: 'Test',
+        score: '300')
+
+      Group.first.cards.create(
+        question: ' React 102?',
+        correctAnswer: 'React 102',
+        answer1: 'Test',
+        answer2: 'Test',
+        answer3: 'React 2',
+        answer4: 'Test',
+        score: '400')
+
+    Group.first.cards.create(
+      question: ' React 102?',
+      correctAnswer: 'React 102',
+      answer1: 'Test',
+      answer2: 'Test',
+      answer3: 'React 2',
+      answer4: 'Test',
+      score: '500')
 
 Group.create(name: 'React 200')
   Group.second.cards.create(
@@ -33,8 +60,50 @@ Group.create(name: 'React 200')
     answer2: 'Test',
     answer3: 'React 201',
     answer4: 'Test',
+      score: '100'
+      )
+
+  Group.second.cards.create(
+    question: 'React 201?',
+    correctAnswer: 'React 201',
+    answer1: 'Test',
+    answer2: 'Test',
+    answer3: 'React 201',
+    answer4: 'Test',
       score: '200'
       )
+  
+  Group.second.cards.create(
+    question: 'React 201?',
+    correctAnswer: 'React 201',
+    answer1: 'Test',
+    answer2: 'Test',
+    answer3: 'React 201',
+    answer4: 'Test',
+      score: '300'
+      )
+  Group.second.cards.create(
+    question: 'React 201?',
+    correctAnswer: 'React 201',
+    answer1: 'Test',
+    answer2: 'Test',
+    answer3: 'React 201',
+    answer4: 'Test',
+      score: '400'
+      )
+  
+  Group.second.cards.create(
+        question: 'React 201?',
+        correctAnswer: 'React 201',
+        answer1: 'Test',
+        answer2: 'Test',
+        answer3: 'React 201',
+        answer4: 'Test',
+          score: '500'
+          )
+        
+
+
 Group.create(name: 'Javascript')
   Group.third.cards.create(
     question: 'Javascript?',
