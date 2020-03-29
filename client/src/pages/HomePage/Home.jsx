@@ -1,5 +1,6 @@
 import React, { useState, useEffect} from 'react';
 import axios from 'axios';
+import { Button } from 'semantic-ui-react';
 
 import './home.styles.scss';
 import Card from '../../components/card/Card';
@@ -43,3 +44,4 @@ const Home = () => {
 }
 
 export default Home
+

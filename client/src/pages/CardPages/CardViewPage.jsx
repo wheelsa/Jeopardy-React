@@ -1,6 +1,5 @@
-import React, {useState,useEffect} from "react"
+import React, { useState, useEffect } from "react"
 import axios from 'axios'
-
 import { Button, Radio, Segment, Card, Form} from 'semantic-ui-react'
 import { Link } from "react-router-dom"
 
@@ -93,60 +92,56 @@ const CardViewPage = (props) => {
       if(cardAnswers === false){ 
         return (
         <>
-        <h2> For {score} Points Your Question is:</h2>
-         <Card key={`cards-${card.id}`}> 
-           <Card.Content> 
-             <Card.Header> 
-             { question }
-             </Card.Header>
-           </Card.Content>
-         </Card>   
+          <h2> For {score} Points Your Question is:</h2>
+          <Card key={`cards-${card.id}`}>
+            <Card.Content>
+              <Card.Header>
+                {question}
+              </Card.Header>
+            </Card.Content>
+          </Card>
         </>)
-        }
-      else {
-        return (
+    }
+    else {
+      return (
         <>
-            <Form onSubmit={handleSubmit}>
+          <Form onSubmit={handleSubmit}>
             <h2> Select Your Answer</h2>
-           
             <Form.Field>
-              <Radio
-                label={`${answer1}`}
-                name='answersGroup'
-                value={`${answer1}`}
-                checked= {value === `${answer1}`}
-                onChange={handleChange}
-              />
-            </Form.Field>
-
-            <Form.Field>
-              <Radio
-                label={`${answer2}`}
-                name='answersGroup'
-                value={`${answer2}`}
-                checked= {value === `2-${answer2}`}
-                onChange={handleChange}
-              />
-            </Form.Field>
-            
-            <Form.Field>
-              <Radio
-                label={`${answer3}`}
-                name='radioGroup'
-                value={`${answer3}`}
-                checked={value === `${answer3}`}
-                onChange={handleChange}
-              />
-            </Form.Field>
-
-            <Form.Field>
-              <Radio
-                label={`4-${answer4}`}
-                name='answersGroup'
-                value={`${answer4}`}
-                checked= {value === `4-${answer4}`}
-                onChange={handleChange}
-              />
+              <Card>
+                <Card.Content>
+                  <Card.Description>
+                    <Radio
+                      label={`${answer1}`}
+                      name='answersGroup'
+                      value={`${answer1}`}
+                      checked={value === `${answer1}`}
+                      onChange={handleChange}
+                    /><br />
+                    <Radio
+                      label={`${answer2}`}
+                      name='answersGroup'
+                      value={`${answer2}`}
+                      checked={value === `${answer2}`}
+                      onChange={handleChange}
+                    /><br />
+                    <Radio
+                      label={`${answer3}`}
+                      name='answersGroup'
+                      value={`${answer3}`}
+                      checked={value === `${answer3}`}
+                      onChange={handleChange}
+                    /><br />
+                    <Radio
+                      label={`${answer4}`}
+                      name='answersGroup'
+                      value={`${answer4}`}
+                      checked={value === `${answer4}`}
+                      onChange={handleChange}
+                    /><br />
+                  </Card.Description>
+                </Card.Content>
+              </Card>
             </Form.Field>
             <br />
           <Form.Field>
@@ -159,22 +154,26 @@ const CardViewPage = (props) => {
         </> )
       }
     }
+  
 
-    const flipAnswers = () =>{
-      setCardAnswers(!cardAnswers)
-    }
-    
-  return(
-    
+  const flipAnswers = () => {
+    setCardAnswers(!cardAnswers)
+  }
+
+
+
+
+  return (
+
     <>
-    
-    <Segment>
-    {cardFlip()}
-    </Segment>
 
-    <Button 
-      color="blue"
-      onClick={flipAnswers}>
+      <Segment>
+        {cardFlip()}
+      </Segment>
+
+      <Button
+        color="blue"
+        onClick={flipAnswers}>
         Flip
     </Button>
     </>

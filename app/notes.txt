@@ -1,0 +1,10 @@
+
+How do we put them in random order? They are not an array, they are immutable state.
+
+Navbar: 
+Link to create New Card in NavBar
+Does our Navbar need to have a connectednavbar?
+
+Cards:
+Link to delete/edit Card on the card?
+Get answers inside the card.

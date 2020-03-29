@@ -105,6 +105,38 @@ Group.create(name: 'React 200')
 
 
 Group.create(name: 'Javascript')
+Group.third.cards.create(
+  question: 'Javascript?',
+  correctAnswer: 'Javascript ELITE',
+  answer1: 'Test1',
+  answer2: 'Test2',
+  answer3: 'Javascript ELITE',
+  answer4: 'Test4',
+  score: '100')
+  Group.third.cards.create(
+    question: 'Javascript?',
+    correctAnswer: 'Javascript ELITE',
+    answer1: 'Test1',
+    answer2: 'Test2',
+    answer3: 'Javascript ELITE',
+    answer4: 'Test3',
+    score: '200')
+    Group.third.cards.create(
+      question: 'Javascript?',
+      correctAnswer: 'Javascript ELITE',
+      answer1: 'Test1',
+      answer2: 'Test2',
+      answer3: 'Javascript ELITE',
+      answer4: 'Test3',
+      score: '300')
+      Group.third.cards.create(
+        question: 'Javascript?',
+        correctAnswer: 'Javascript ELITE',
+        answer1: 'Test1',
+        answer2: 'Test2',
+        answer3: 'Javascript ELITE',
+        answer4: 'Test3',
+        score: '400')
   Group.third.cards.create(
     question: 'Javascript?',
     correctAnswer: 'Javascript ELITE',
@@ -113,6 +145,9 @@ Group.create(name: 'Javascript')
     answer3: 'Javascript ELITE',
     answer4: 'Test4',
     score: '500')
+    
+
+
 Group.create(name: 'WildCard')
   Group.fourth.cards.create(
     question: ' Wildcard ??? ',
