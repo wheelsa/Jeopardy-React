@@ -1,7 +1,9 @@
 import React,{useState, useEffect} from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom';
-import { Card, Button } from 'semantic-ui-react'
+import { Card, Button, } from 'semantic-ui-react'
+
+import './GroupsPages.styles.scss'
 
 const GroupsPage = () => {
 
@@ -19,15 +21,17 @@ return (
         <Card key={`group-${group.id}`}> 
           <Card.Content> 
             <Card.Header> 
-            { group.name }
+            Group Name: { group.name }
             </Card.Header>
           </Card.Content>
 
-          <Button as={Link} to={`/groups/${group.id}`} color='blue'> 
-            View
+          <Button as={Link} to={`/groups/${group.id}/cards/`} color='blue'> 
+            View and Edit
           </Button>
 
         </Card>
+      
+        
             
         )
 

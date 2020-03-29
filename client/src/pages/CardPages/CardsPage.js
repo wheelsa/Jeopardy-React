@@ -24,6 +24,28 @@
       })
     }, [])
     
+    deletePost = (id) => (
+      axios.delete(`api/groups/${groupID}/cards/${card.id}`)
+      .catch(err => {
+        console.log(err)
+      })
+    )
+
+    const cardFlip = () => {
+      // if(cardAnswers === true){ 
+        if(cards.card.id.cardAnswers === true){ 
+        cards.map( card => (
+         <Card key={`cards-${card.id}`}> 
+           <Card.Content> 
+             <Card.Header> 
+             { card.question }
+             </Card.Header>
+           </Card.Content>
+         </Card>   
+         )
+       ) }
+    }
+    
   return (
         cards.map( card => (
           <Card key={`cards-${card.id}`}> 
@@ -32,6 +54,16 @@
               { card.question } 
               </Card.Header>
             </Card.Content>
+
+            <Button as={Link} to={`/groups/groupID/cards/${card.id}`} color='blue'> 
+              Click to View
+            </Button><Button as={Link} to={`/groups/groupID/cards`} color='blue'> 
+              Click to Edit
+            </Button>
+            {/* Button onClick={() => deletePost(${card.id})}
+              Click to Delete
+            </Button> */}
+
           </Card>
               
           )
