@@ -9,7 +9,8 @@ import Navbar from '../../components/Navbar';
 
 const Home = () => {
   const [group, setGroup] = useState([])
-  
+
+
   useEffect( ()=> {
     axios.get('api/groups').then(res => {
       setGroup(res.data)

@@ -23,41 +23,15 @@
         console.log(err)
       })
     }, [])
-
-    const cardFlip = () => {
-      // if(cardAnswers === true){ 
-        if(cards.card.id.cardAnswers === true){ 
-        cards.map( card => (
-         <Card key={`cards-${card.id}`}> 
-           <Card.Content> 
-             <Card.Header> 
-             { card.question }
-             </Card.Header>
-             <Card.Header>
-               {/* <RenderAnswers({this.props}) /> */}
-                <RenderAnswers />
-                {/* // this is where I'm wondering if we pass props? */}
-
-             </Card.Header>
-           </Card.Content>
-         </Card>   
-         )
-       ) }
-    }
     
   return (
         cards.map( card => (
           <Card key={`cards-${card.id}`}> 
             <Card.Content> 
               <Card.Header> 
-              { card.question }
+              { card.question } 
               </Card.Header>
             </Card.Content>
-
-            <Button as={Link} to={`/groups/${card.id}`} color='blue'> 
-              View
-            </Button>
-
           </Card>
               
           )

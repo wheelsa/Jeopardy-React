@@ -16,6 +16,10 @@ class Api::CardsController < ApplicationController
   end 
 
   def update
+    group = Group.find(params[:group_id])
+    card = group.cards.find(params[:id])
+    card.update_attributes(card_params)
+    render json: group.cards.find(params[:id])
   end
 
   def destroy

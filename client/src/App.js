@@ -25,6 +25,7 @@ function App() {
         <Route exact path='/groups/:group_id/cards/' component={CardsPage} />
         <Route path='/groups/:group_id/cards/:id' component={CardViewPage} />
 
+
       </Switch>
       </Container>
     </div>
