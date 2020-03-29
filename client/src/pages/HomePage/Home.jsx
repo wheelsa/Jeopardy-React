@@ -4,6 +4,7 @@ import { Button } from 'semantic-ui-react';
 
 import './home.styles.scss';
 import Card from '../../components/card/Card';
+import Navbar from '../../components/Navbar';
 
 
 const Home = () => {
@@ -33,6 +34,7 @@ const Home = () => {
 
   return(
     <>
+    <Navbar />
       <div className='page'>
         <div className='header'>
         {groups()}

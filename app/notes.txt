@@ -3,7 +3,7 @@ How do we put them in random order? They are not an array, they are immutable st
 
 Navbar: 
 Link to create New Card in NavBar
-Does our Navbar need to have a connectednavbar?
+Does our Navbar need to have a ConnectedNavbar?
 
 Cards:
 Link to delete/edit Card on the card?

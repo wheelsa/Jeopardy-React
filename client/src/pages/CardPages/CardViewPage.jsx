@@ -178,6 +178,16 @@ const CardViewPage = (props) => {
         onClick={flipAnswers}>
         Flip
     </Button>
+    <Button
+      color="blue"
+      >
+        Edit Question
+      </Button>
+      <Button
+      color="red"
+      >
+        Delete Question
+      </Button>
     </>
   )
 
