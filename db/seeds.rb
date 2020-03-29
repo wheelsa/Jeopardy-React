@@ -10,95 +10,95 @@ Group.create(name: 'React 101')
   Group.first.cards.create(
       question: ' React components have lifecycle events that fall into three general categories?',
       correctAnswer: 'Initialization, State/Property Update, Destruction',
-      answer1: 'Answer 1',
-      answer2: 'Answer 1',
-      answer3: 'Answer 3',
-      answer4: 'Answer 4',
+      answer1: 'Test1',
+      answer2: 'Test2',
+      answer3: 'Initialization, State/Property Update, Destruction',
+      answer4: 'Test4',
       score: '100')
 
       Group.first.cards.create(
       question: ' React 102?',
       correctAnswer: 'React 102',
-      answer1: 'Test',
-      answer2: 'Test',
+      answer1: 'Test1',
+      answer2: 'Test2',
       answer3: 'React 2',
-      answer4: 'Test',
+      answer4: 'Test4',
       score: '200')
       
       Group.first.cards.create(
         question: ' React 102?',
         correctAnswer: 'React 102',
-        answer1: 'Test',
-        answer2: 'Test',
+        answer1: 'Test1',
+        answer2: 'Test2',
         answer3: 'React 2',
-        answer4: 'Test',
+        answer4: 'Test4',
         score: '300')
 
       Group.first.cards.create(
         question: ' React 102?',
         correctAnswer: 'React 102',
-        answer1: 'Test',
-        answer2: 'Test',
+        answer1: 'Test1',
+        answer2: 'Test2',
         answer3: 'React 2',
-        answer4: 'Test',
+        answer4: 'Test4',
         score: '400')
 
     Group.first.cards.create(
       question: ' React 102?',
       correctAnswer: 'React 102',
-      answer1: 'Test',
-      answer2: 'Test',
+      answer1: 'Test1',
+      answer2: 'Test2',
       answer3: 'React 2',
-      answer4: 'Test',
+      answer4: 'Test4',
       score: '500')
 
 Group.create(name: 'React 200')
   Group.second.cards.create(
     question: 'React 201?',
     correctAnswer: 'React 201',
-    answer1: 'Test',
-    answer2: 'Test',
+    answer1: 'Test1',
+    answer2: 'Test2',
     answer3: 'React 201',
-    answer4: 'Test',
+    answer4: 'Test4',
       score: '100'
       )
 
   Group.second.cards.create(
     question: 'React 201?',
     correctAnswer: 'React 201',
-    answer1: 'Test',
-    answer2: 'Test',
+    answer1: 'Test1',
+    answer2: 'Test2',
     answer3: 'React 201',
-    answer4: 'Test',
+    answer4: 'Test4',
       score: '200'
       )
   
   Group.second.cards.create(
     question: 'React 201?',
     correctAnswer: 'React 201',
-    answer1: 'Test',
-    answer2: 'Test',
+    answer1: 'Test1',
+    answer2: 'Test2',
     answer3: 'React 201',
-    answer4: 'Test',
+    answer4: 'Test4',
       score: '300'
       )
   Group.second.cards.create(
     question: 'React 201?',
     correctAnswer: 'React 201',
-    answer1: 'Test',
-    answer2: 'Test',
+    answer1: 'Test1',
+    answer2: 'Test2',
     answer3: 'React 201',
-    answer4: 'Test',
+    answer4: 'Test4',
       score: '400'
       )
   
   Group.second.cards.create(
         question: 'React 201?',
         correctAnswer: 'React 201',
-        answer1: 'Test',
-        answer2: 'Test',
+        answer1: 'Test1',
+        answer2: 'Test2',
         answer3: 'React 201',
-        answer4: 'Test',
+        answer4: 'Test4',
           score: '500'
           )
         
@@ -108,42 +108,42 @@ Group.create(name: 'Javascript')
 Group.third.cards.create(
   question: 'Javascript?',
   correctAnswer: 'Javascript ELITE',
-  answer1: 'Test',
-  answer2: 'Test',
+  answer1: 'Test1',
+  answer2: 'Test2',
   answer3: 'Javascript ELITE',
-  answer4: 'Test',
+  answer4: 'Test4',
   score: '100')
   Group.third.cards.create(
     question: 'Javascript?',
     correctAnswer: 'Javascript ELITE',
-    answer1: 'Test',
-    answer2: 'Test',
+    answer1: 'Test1',
+    answer2: 'Test2',
     answer3: 'Javascript ELITE',
-    answer4: 'Test',
+    answer4: 'Test3',
     score: '200')
     Group.third.cards.create(
       question: 'Javascript?',
       correctAnswer: 'Javascript ELITE',
-      answer1: 'Test',
-      answer2: 'Test',
+      answer1: 'Test1',
+      answer2: 'Test2',
       answer3: 'Javascript ELITE',
-      answer4: 'Test',
+      answer4: 'Test3',
       score: '300')
       Group.third.cards.create(
         question: 'Javascript?',
         correctAnswer: 'Javascript ELITE',
-        answer1: 'Test',
-        answer2: 'Test',
+        answer1: 'Test1',
+        answer2: 'Test2',
         answer3: 'Javascript ELITE',
-        answer4: 'Test',
+        answer4: 'Test3',
         score: '400')
   Group.third.cards.create(
     question: 'Javascript?',
     correctAnswer: 'Javascript ELITE',
-    answer1: 'Test',
-    answer2: 'Test',
+    answer1: 'Test1',
+    answer2: 'Test2',
     answer3: 'Javascript ELITE',
-    answer4: 'Test',
+    answer4: 'Test4',
     score: '500')
     
 
@@ -152,43 +152,21 @@ Group.create(name: 'WildCard')
   Group.fourth.cards.create(
     question: ' Wildcard ??? ',
     correctAnswer: 'Wildcard!?@#$',
-    answer1: 'Test',
-    answer2: 'Test',
+    answer1: 'Test1',
+    answer2: 'Test2',
     answer3: 'Wildcard!?@#$',
-    answer4: 'Test',
-    score: '100')
-    Group.fourth.cards.create(
-      question: ' Wildcard ??? ',
-      correctAnswer: 'Wildcard!?@#$',
-      answer1: 'Test',
-      answer2: 'Test',
-      answer3: 'Wildcard!?@#$',
-      answer4: 'Test',
-      score: '200')
-      Group.fourth.cards.create(
-        question: ' Wildcard ??? ',
-        correctAnswer: 'Wildcard!?@#$',
-        answer1: 'Test',
-        answer2: 'Test',
-        answer3: 'Wildcard!?@#$',
-        answer4: 'Test',
-        score: '300')
-        Group.fourth.cards.create(
-          question: ' Wildcard ??? ',
-          correctAnswer: 'Wildcard!?@#$',
-          answer1: 'Test',
-          answer2: 'Test',
-          answer3: 'Wildcard!?@#$',
-          answer4: 'Test',
-          score: '400')
-          Group.fourth.cards.create(
-            question: ' Wildcard ??? ',
-            correctAnswer: 'Wildcard!?@#$',
-            answer1: 'Test',
-            answer2: 'Test',
-            answer3: 'Wildcard!?@#$',
-            answer4: 'Test',
-            score: '500')
+    answer4: 'Test4',
+    score: '300')
 
-puts 'groups and cards seeded'
+Team.create(
+  name: 'Circles',
+  teamScore: '0',
+  turn: true)
+
+Team.create(
+  name: 'Squares',
+  teamScore: '0',
+  turn: false)
+
+puts 'groups, cards, teams seeded'
 

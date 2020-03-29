@@ -11,7 +11,6 @@ const Card = (props) => {
 
   useEffect( () => {
     axios.get(`/api/groups/${groupID}/cards/`,).then( res => {
-      console.log(res.data)
       setCards(res.data)
     })
   }, [])
