@@ -1,6 +1,6 @@
 import React, {useState,useEffect} from "react"
 import axios from 'axios'
-import { Button, Header, Segment} from 'semantic-ui-react'
+import { Button, Header, Segment, Card, } from 'semantic-ui-react'
 
 const GroupView = (props) => {
 
@@ -22,8 +22,14 @@ const {name, id} = group
   return(
     <>
     <Segment>
-      <Header as="h1">{ name }</Header>
-  
+      <Header as="h1">Group Name: { name }</Header>
+      <Card>
+        <Card.Content>
+        </Card.Content>
+      </Card>
+
+
+
     </Segment>
 
 

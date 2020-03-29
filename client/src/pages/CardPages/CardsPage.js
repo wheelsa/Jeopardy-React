@@ -23,6 +23,13 @@
         console.log(err)
       })
     }, [])
+    
+    deletePost = (id) => (
+      axios.delete(`api/groups/${groupID}/cards/${card.id}`)
+      .catch(err => {
+        console.log(err)
+      })
+    )
 
     const cardFlip = () => {
       // if(cardAnswers === true){ 
@@ -48,9 +55,14 @@
               </Card.Header>
             </Card.Content>
 
-            <Button as={Link} to={`/groups/${card.id}`} color='blue'> 
-              View
+            <Button as={Link} to={`/groups/groupID/cards/${card.id}`} color='blue'> 
+              Click to View
+            </Button><Button as={Link} to={`/groups/groupID/cards`} color='blue'> 
+              Click to Edit
             </Button>
+            {/* Button onClick={() => deletePost(${card.id})}
+              Click to Delete
+            </Button> */}
 
           </Card>
               

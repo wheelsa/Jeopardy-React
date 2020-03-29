@@ -6,16 +6,23 @@ class Navbar extends React.Component {
   render() {
     return (
       <Menu>
+
+<Link to='/groups/'>
+            <Menu.Item
+              name='newCard'
+              id='newCard'
+              >
+                Select Group to Add a New Card To
+              </Menu.Item>
+          </Link>
+        <Link to='/'>
         <Menu.Item
-              name='home'
-              id='home'
-              active={this.props.location.pathname === '/newCard'}
-            />
-          Link to New Card
-          {/* <Link to '../../../controllers/api/cards_controller.rb'> */}
-        <Menu.Item>
+        name='home'
+        id='home
+        '>
           Return to Jeopardy Board
         </Menu.Item>
+        </Link>
       </Menu>
     )
   }
