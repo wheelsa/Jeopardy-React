@@ -5,6 +5,8 @@
   import { Card, Button, Radio } from 'semantic-ui-react';
   import RenderAnswers from '../../components/RenderAnswers/RenderAnswers';
 
+  import './CardPages.styles.scss'
+
   
 
   const CardsPage = (props) => {
@@ -31,12 +33,12 @@
              <Card.Header> 
              { card.question }
              </Card.Header>
-             <Card.Description>
+             <Card.Header>
                {/* <RenderAnswers({this.props}) /> */}
                 <RenderAnswers />
                 {/* // this is where I'm wondering if we pass props? */}
 
-             </Card.Description>
+             </Card.Header>
            </Card.Content>
          </Card>   
          )
@@ -52,9 +54,9 @@
               </Card.Header>
             </Card.Content>
 
-            {/* <Button as={Link} to={`/groups/${group.id}`} color='blue'> 
+            <Button as={Link} to={`/groups/${card.id}`} color='blue'> 
               View
-            </Button> */}
+            </Button>
 
           </Card>
               

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Radio } from 'semantic-ui-react';
+import { Radio, Card } from 'semantic-ui-react';
 
 const RenderAnswer = (props) => {
 
@@ -21,12 +21,17 @@ const RenderAnswer = (props) => {
   return (
     <>
       <p>
-        <Radio label={this.props.answer1} />
-        <Radio label={this.props.answer2} />
-        <Radio label={this.props.answer3} />
-        <Radio label={this.props.answer4} />
-        <Radio label={this.props.correctAnswer} />
-       
+        <Card>
+          <Card.Content>
+            <Card.Description>
+              <Radio label={this.props.answer1} />
+              <Radio label={this.props.answer2} />
+              <Radio label={this.props.answer3} />
+              <Radio label={this.props.answer4} />
+              <Radio label={this.props.correctAnswer} />
+            </Card.Description>
+          </Card.Content>
+        </Card>
       </p>
     </>
   )
