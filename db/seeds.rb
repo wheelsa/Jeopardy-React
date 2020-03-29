@@ -10,10 +10,10 @@ Group.create(name: 'React 101')
   Group.first.cards.create(
       question: ' React components have lifecycle events that fall into three general categories?',
       correctAnswer: 'Initialization, State/Property Update, Destruction',
-      answer1: 'Test',
-      answer2: 'Test',
-      answer3: 'Initialization, State/Property Update, Destruction',
-      answer4: 'Test',
+      answer1: 'Answer 1',
+      answer2: 'Answer 1',
+      answer3: 'Answer 3',
+      answer4: 'Answer 4',
       score: '100')
 
       Group.first.cards.create(
