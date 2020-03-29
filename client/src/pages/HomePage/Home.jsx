@@ -2,7 +2,7 @@ import React, { useState, useEffect} from 'react';
 import axios from 'axios';
 
 import './home.styles.scss';
-import Card from '../components/card/Card';
+import Card from '../../components/card/Card';
 
 
 const Home = () => {
@@ -21,7 +21,7 @@ const Home = () => {
         <>
           {group.map( group => (
             <div className="header-block" key={group.id}> 
-              <span> {group.name} </span>
+              <h2> {group.name} </h2>
               <Card groupID = {group.id }/>
             </div>
       

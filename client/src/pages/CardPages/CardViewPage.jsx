@@ -13,7 +13,7 @@ const CardViewPage = (props) => {
 
   const groupID = props.match.params.group_id
   const id = props.match.params.id
-  const {answer1, answer2, answer3, answer4, question} = card
+  const {answer1, answer2, answer3, answer4, question, score} = card
 
     useEffect( ()=> {
       axios.get(`/api/groups/${groupID}/cards/${id}`).then(res => {
@@ -30,6 +30,7 @@ const CardViewPage = (props) => {
       if(cardAnswers === false){ 
         return (
         <>
+        <h2> For {score} Points Your Question is:</h2>
          <Card key={`cards-${card.id}`}> 
            <Card.Content> 
              <Card.Header> 
@@ -43,9 +44,8 @@ const CardViewPage = (props) => {
         return (
         <>
             <Form>
-            <Form.Field>
-              Selected answer: <b>{value}</b>
-            </Form.Field>
+            <h2> Select Your Answer</h2>
+           
             <Form.Field>
               <Radio
                 label={`${answer1}`}
@@ -65,6 +65,11 @@ const CardViewPage = (props) => {
               />
             </Form.Field>
           </Form>
+          <br />
+          <Form.Field>
+              Selected answer: <b>{value}</b>
+            </Form.Field>
+            <br />
         </> )
       }
     }
@@ -77,7 +82,9 @@ const CardViewPage = (props) => {
   
 
   return(
+
     <>
+    
     <Segment>
     {cardFlip()}
     </Segment>
