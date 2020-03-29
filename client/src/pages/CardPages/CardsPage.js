@@ -2,14 +2,14 @@
   import React,{useState, useEffect} from 'react'
   import axios from 'axios'
   import { Link } from 'react-router-dom';
-  import { Card, Button, Radio } from 'semantic-ui-react'
+  import { Card, Button, Radio } from 'semantic-ui-react';
+  import RenderAnswers from '../../components/RenderAnswers/RenderAnswers';
+
   
-  import { RenderAnswers } from '../../components/card/RenderAnswers/RenderAnswers';
 
   const CardsPage = (props) => {
 
   const [cards, setCards] = useState([])
-  const [cardAnswers, setCardAnswers] = useState(false)
   
   const groupID = props.match.params.group_id
   // const ID = props.match.params.id
@@ -23,7 +23,8 @@
     }, [])
 
     const cardFlip = () => {
-      if(cardAnswers === true){ 
+      // if(cardAnswers === true){ 
+        if(cards.card.id.cardAnswers === true){ 
         cards.map( card => (
          <Card key={`cards-${card.id}`}> 
            <Card.Content> 
@@ -31,9 +32,9 @@
              { card.question }
              </Card.Header>
              <Card.Description>
-               <RenderAnswers({this.props}) />
-
-                // this is where I'm wondering if we pass props?
+               {/* <RenderAnswers({this.props}) /> */}
+                <RenderAnswers />
+                {/* // this is where I'm wondering if we pass props? */}
 
              </Card.Description>
            </Card.Content>
@@ -43,9 +44,23 @@
     }
     
   return (
-          <>
-          </>
-      )
+        cards.map( card => (
+          <Card key={`cards-${card.id}`}> 
+            <Card.Content> 
+              <Card.Header> 
+              { card.question }
+              </Card.Header>
+            </Card.Content>
+
+            {/* <Button as={Link} to={`/groups/${group.id}`} color='blue'> 
+              View
+            </Button> */}
+
+          </Card>
+              
+          )
+
+        ))
     }
 
     export default CardsPage

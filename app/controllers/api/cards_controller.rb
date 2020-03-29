@@ -13,7 +13,6 @@ class Api::CardsController < ApplicationController
   def show
     group = Group.find(params[:group_id])
     render json: group.cards.find(params[:id])
-
   end 
 
   def update

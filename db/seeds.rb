@@ -105,6 +105,38 @@ Group.create(name: 'React 200')
 
 
 Group.create(name: 'Javascript')
+Group.third.cards.create(
+  question: 'Javascript?',
+  correctAnswer: 'Javascript ELITE',
+  answer1: 'Test',
+  answer2: 'Test',
+  answer3: 'Javascript ELITE',
+  answer4: 'Test',
+  score: '100')
+  Group.third.cards.create(
+    question: 'Javascript?',
+    correctAnswer: 'Javascript ELITE',
+    answer1: 'Test',
+    answer2: 'Test',
+    answer3: 'Javascript ELITE',
+    answer4: 'Test',
+    score: '200')
+    Group.third.cards.create(
+      question: 'Javascript?',
+      correctAnswer: 'Javascript ELITE',
+      answer1: 'Test',
+      answer2: 'Test',
+      answer3: 'Javascript ELITE',
+      answer4: 'Test',
+      score: '300')
+      Group.third.cards.create(
+        question: 'Javascript?',
+        correctAnswer: 'Javascript ELITE',
+        answer1: 'Test',
+        answer2: 'Test',
+        answer3: 'Javascript ELITE',
+        answer4: 'Test',
+        score: '400')
   Group.third.cards.create(
     question: 'Javascript?',
     correctAnswer: 'Javascript ELITE',
@@ -113,6 +145,9 @@ Group.create(name: 'Javascript')
     answer3: 'Javascript ELITE',
     answer4: 'Test',
     score: '500')
+    
+
+
 Group.create(name: 'WildCard')
   Group.fourth.cards.create(
     question: ' Wildcard ??? ',
@@ -121,7 +156,39 @@ Group.create(name: 'WildCard')
     answer2: 'Test',
     answer3: 'Wildcard!?@#$',
     answer4: 'Test',
-    score: '300')
+    score: '100')
+    Group.fourth.cards.create(
+      question: ' Wildcard ??? ',
+      correctAnswer: 'Wildcard!?@#$',
+      answer1: 'Test',
+      answer2: 'Test',
+      answer3: 'Wildcard!?@#$',
+      answer4: 'Test',
+      score: '200')
+      Group.fourth.cards.create(
+        question: ' Wildcard ??? ',
+        correctAnswer: 'Wildcard!?@#$',
+        answer1: 'Test',
+        answer2: 'Test',
+        answer3: 'Wildcard!?@#$',
+        answer4: 'Test',
+        score: '300')
+        Group.fourth.cards.create(
+          question: ' Wildcard ??? ',
+          correctAnswer: 'Wildcard!?@#$',
+          answer1: 'Test',
+          answer2: 'Test',
+          answer3: 'Wildcard!?@#$',
+          answer4: 'Test',
+          score: '400')
+          Group.fourth.cards.create(
+            question: ' Wildcard ??? ',
+            correctAnswer: 'Wildcard!?@#$',
+            answer1: 'Test',
+            answer2: 'Test',
+            answer3: 'Wildcard!?@#$',
+            answer4: 'Test',
+            score: '500')
 
 puts 'groups and cards seeded'
 

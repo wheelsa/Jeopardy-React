@@ -5,7 +5,7 @@ import { Container, } from 'semantic-ui-react';
 
 import './App.css';
 
-import Home from './pages/Home';
+import Home from './pages/HomePage/Home';
 import GroupsPage from './pages/GroupPages/GroupsPage';
 import GroupView from './pages/GroupPages/GroupView';
 import CardsPage from './pages/CardPages/CardsPage';
@@ -24,7 +24,7 @@ function App() {
         <Route exact path="/groups" component={GroupsPage} />
         <Route exact path='/groups/:group_id' component={GroupView} />
         <Route exact path='/groups/:group_id/cards/' component={CardsPage} />
-        <Route exact path='/groups/:group_id/cards/:id' component={CardViewPage} />
+        <Route path='/groups/:group_id/cards/:id' component={CardViewPage} />
 
       </Switch>
       </Container>

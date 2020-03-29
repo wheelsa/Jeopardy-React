@@ -1,11 +1,10 @@
-Where are we showing the buttons?
-Is RenderAnswers only rendering the correct answer or all of them?
+
 How do we put them in random order? They are not an array, they are immutable state.
 
-In CardsPage, if this is where we call RenderAnswers, how to pass props?
-In RenderAnswers, are those calling props right? 
-
-I'm not sure my path is correct when I import RenderAnswers in CardsPage
-
+Navbar: 
 Link to create New Card in NavBar
-Lin kto delete Card on the card
+Does our Navbar need to have a connectednavbar?
+
+Cards:
+Link to delete/edit Card on the card?
+Get answers inside the card.
