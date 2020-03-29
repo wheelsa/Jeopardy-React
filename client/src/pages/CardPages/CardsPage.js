@@ -33,12 +33,6 @@
              <Card.Header> 
              { card.question }
              </Card.Header>
-             <Card.Header>
-               {/* <RenderAnswers({this.props}) /> */}
-                <RenderAnswers />
-                {/* // this is where I'm wondering if we pass props? */}
-
-             </Card.Header>
            </Card.Content>
          </Card>   
          )

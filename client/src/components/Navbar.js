@@ -6,10 +6,13 @@ class Navbar extends React.Component {
   render() {
     return (
       <Menu>
-        <Menu.Item>
+        <Menu.Item
+              name='home'
+              id='home'
+              active={this.props.location.pathname === '/newCard'}
+            />
           Link to New Card
           {/* <Link to '../../../controllers/api/cards_controller.rb'> */}
-        </Menu.Item>
         <Menu.Item>
           Return to Jeopardy Board
         </Menu.Item>
