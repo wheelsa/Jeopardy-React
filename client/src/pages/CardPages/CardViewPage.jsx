@@ -53,8 +53,9 @@ const CardViewPage = (props) => {
           let team1ScoreInt = parseInt(team1TeamScore)
           let scoreInt = parseInt(score)
 
-        setTeam1(team1.teamScore = (team1ScoreInt + scoreInt).toString())
-          
+        setTeam1(team1.teamScore = (team1ScoreInt + scoreInt).toString(), team1.turn = false)
+        setTeam2( team2.turn = true)
+        
         axios
         .put(`/api/teams/1`, team1 )
         .then(res => {
@@ -64,10 +65,11 @@ const CardViewPage = (props) => {
           console.log(err.response);
         });
         } else {
-          setTeam2({
-            teamScore: team2TeamScore + score,
-            turn: false
-            })
+          let scoreInt = parseInt(score)
+          let team2ScoreInt = parseInt(team2TeamScore)
+
+          setTeam2(team2.teamScore = (team2ScoreInt + scoreInt).toString(), team2.turn = false)
+          setTeam1( team1.turn = true)
           axios
           .put(`/api/teams/2`, team2 )
           .then(res => {
