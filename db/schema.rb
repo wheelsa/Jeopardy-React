@@ -30,12 +30,6 @@ ActiveRecord::Schema.define(version: 2020_03_27_144251) do
     t.index ["group_id"], name: "index_cards_on_group_id"
   end
 
-  create_table "categories", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "groups", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false

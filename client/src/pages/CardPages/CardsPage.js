@@ -2,8 +2,10 @@
   import React,{useState, useEffect} from 'react'
   import axios from 'axios'
   import { Link } from 'react-router-dom';
-  import { Card, Button } from 'semantic-ui-react'
+  import { Card, Button, Radio } from 'semantic-ui-react'
   
+  import { RenderAnswers } from '../../components/card/RenderAnswers/RenderAnswers';
+
   const CardsPage = (props) => {
 
   const [cards, setCards] = useState([])
@@ -28,6 +30,12 @@
              <Card.Header> 
              { card.question }
              </Card.Header>
+             <Card.Description>
+               <RenderAnswers({this.props}) />
+
+                // this is where I'm wondering if we pass props?
+
+             </Card.Description>
            </Card.Content>
          </Card>   
          )

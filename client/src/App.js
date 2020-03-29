@@ -1,5 +1,7 @@
 import React from 'react';
-import {Route, Switch} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom';
+import { Container, } from 'semantic-ui-react';
+
 
 import './App.css';
 
@@ -8,11 +10,14 @@ import GroupsPage from './pages/GroupPages/GroupsPage';
 import GroupView from './pages/GroupPages/GroupView';
 import CardsPage from './pages/CardPages/CardsPage';
 import CardViewPage from './pages/CardPages/CardViewPage';
+import Navbar from './components/Navbar';
 
 function App() {
 
   return (
     <div>
+      <Navbar />
+      <Container>
       <Switch>
       
         <Route exact path='/' component={Home} />
@@ -22,6 +27,7 @@ function App() {
         <Route exact path='/groups/:group_id/cards/:id' component={CardViewPage} />
 
       </Switch>
+      </Container>
     </div>
   );
 }
