@@ -46,9 +46,13 @@ import React,{useState, useEffect} from 'react'
               </Card.Header>
               </Card.Content>
             <Link to={`/groups/group.id/cards/${card.id}`}><Button color='blue'>Click to View</Button></Link>
+
+            // the editCard needs to actually use the NewCardPage to send the form info back to editCard (i.e. I don't think we need an id)
             <Button onClick={() =>editCard(`${card.id}`)} color='blue'> 
               Click to Edit
             </Button>
+
+            // I'm not sure why this one is not working. erroring on axios.delete
             <Button onClick={() => deleteCard(`${card.id}`)} color="blue">
               Click to Delete
             </Button>
