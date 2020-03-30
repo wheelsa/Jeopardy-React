@@ -12,18 +12,19 @@ import React,{useState, useEffect} from 'react'
         useEffect( ()=> {
           axios.get(`/api/groups/${groupID}/cards`).then(res => {
             setItem(res.data)
+  
           }).catch(err => {
             console.log(err)
           })
         }, [])
         console.log(item)
 
-    // const deleteCard = (id) => (
-    //   axios.delete(`api/groups/${groupID}/cards/${card.id}`)
-    //   .catch(err => {
-    //     console.log(err)
-    //   })
-    // )
+    const deleteCard = (id) => (
+      axios.delete(`api/groups/${groupID}/cards/`)
+      .catch(err => {
+        console.log(err)
+      })
+    )
 
     //need to edit with a form
     const editCard = (id) => (
@@ -44,24 +45,26 @@ import React,{useState, useEffect} from 'react'
               { card.question } 
               </Card.Header>
               </Card.Content>
-            <Button as={Link} to={`/groups/groupID/cards/${card.id}`} color='blue'> 
-              Click to View
-              </Button>
-            {/*<Button onClick={() =>editCard(`${card.id}`)} color='blue'> 
+            <Link to={`/groups/group.id/cards/${card.id}`}><Button color='blue'>Click to View</Button></Link>
+            <Button onClick={() =>editCard(`${card.id}`)} color='blue'> 
               Click to Edit
-            </Button> */}
-            {/* <Button onClick={() => deleteCard(`${card.id}`)} color="blue">
+            </Button>
+            <Button onClick={() => deleteCard(`${card.id}`)} color="blue">
               Click to Delete
-            </Button> */}
+            </Button>
             
           </Card>
           )
         ))
+
+
     }
+
   return (
     <>
     {mapCards()}
     </>
   )
     }
+ 
     export default CardsPage

@@ -6,7 +6,7 @@ const GroupView = (props) => {
 
 const [group, setGroup] = useState({group: {}})
 const groupID = props.match.params.group_id
-const {name, id} = group
+const {name} = group
 
     useEffect( ()=> {
       axios.get(`/api/groups/${groupID}`).then(res => {

@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react"
 import axios from 'axios'
 import { Button, Radio, Segment, Card, Form} from 'semantic-ui-react'
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 
 const CardViewPage = (props) => {
 
@@ -11,7 +11,7 @@ const CardViewPage = (props) => {
   const [value, setValue] = useState('')
   const [cardAnswers, setCardAnswers] = useState(false)
   const [team1, setTeam1] = useState([])
-  const [team2, setTeam2] = useState({})
+  const [team2, setTeam2] = useState([])
 
 
   const groupID = props.match.params.group_id
@@ -45,19 +45,21 @@ const CardViewPage = (props) => {
     }, [])
 
     const handleChange = (e, { value }) => 
-    (setValue(value), console.log(value))
+    (setValue(value))
     
 
     const handleSubmit = () => {
-    
+     
       if (value === correctAnswer){
+  
         if(team1.turn === true){
           let team1ScoreInt = parseInt(team1TeamScore)
           let scoreInt = parseInt(score)
 
         setTeam1(team1.teamScore = (team1ScoreInt + scoreInt).toString(), team1.turn = false)
-        setTeam2( team2.turn = true)
-        
+        setTeam2( team2.turn = true )
+       
+
         axios
         .put(`/api/teams/1`, team1 )
         .then(res => {
@@ -66,7 +68,16 @@ const CardViewPage = (props) => {
         .catch(err => {
           console.log(err.response);
         });
-        } else {
+
+        axios
+        .put(`/api/teams/2`, team2 )
+        .then(res => {
+          props.history.push("/");
+        })
+        .catch(err => {
+          console.log(err.response);
+        });
+        } else if (team2.turn == true){
           let scoreInt = parseInt(score)
           let team2ScoreInt = parseInt(team2TeamScore)
 
@@ -80,12 +91,22 @@ const CardViewPage = (props) => {
           .catch(err => {
             console.log(err.response);
           });
+          axios
+          .put(`/api/teams/1`, team1 )
+          .then(res => {
+            props.history.push("/");
+          })
+          .catch(err => {
+            console.log(err.response);
+          });
+          
+        }else {
+          console.log('error')
         }
       } else {
         alert('Sorry, thats the wrong answer!')
         props.history.push("/")
       }
-      console.log(team1)
       }
   
 
