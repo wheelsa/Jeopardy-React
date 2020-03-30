@@ -34,7 +34,7 @@ const Home = () => {
 
   return(
     <>
-    <Navbar />
+    {/* <Navbar /> */}
       <div className='page'>
         <div className='header'>
         {groups()}

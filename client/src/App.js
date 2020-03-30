@@ -18,6 +18,7 @@ function App() {
   return (
     <div>
       <Container>
+        <Navbar />
       <Switch>
       
         <Route exact path='/' component={Home} />

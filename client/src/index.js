@@ -7,6 +7,7 @@ import 'semantic-ui-css/semantic.min.css';
 import './index.css';
 
 import App from './App';
+import Navbar from './components/Navbar';
 
 ReactDOM.render(
   <BrowserRouter> 
