@@ -12,6 +12,16 @@ const TeamScore = (props)=>{
       console.log(err)
     })
   }, [])
+  
+  const teamHeader = (team) =>{
+    {if (team.turn === true){return (
+      <Header color='blue'> {team.name}'s Turn &#128072; </Header>)
+    }
+  else {return (
+    <Header>{team.name} </Header>)
+  }
+  }}
+  
 
   const mapTeams = () =>{
     return (
@@ -22,7 +32,8 @@ const TeamScore = (props)=>{
 
           <div className="item" key={`team-${team.id}`}>
             <div className="content">
-              <div className="header">{team.name}</div>
+              {teamHeader(team)}
+           
               <div className="description">{team.teamScore}</div>
             </div>
           </div>
