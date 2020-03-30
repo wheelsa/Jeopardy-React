@@ -10,7 +10,6 @@ import GroupsPage from './pages/GroupPages/GroupsPage';
 import GroupView from './pages/GroupPages/GroupView';
 import CardsPage from './pages/CardPages/CardsPage';
 import CardViewPage from './pages/CardPages/CardViewPage';
-import Navbar from './components/Navbar';
 import NewCardPage from './components/NewCardPage';
 
 function App() {

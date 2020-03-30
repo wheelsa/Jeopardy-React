@@ -2,7 +2,7 @@
   import React,{useState, useEffect} from 'react'
   import axios from 'axios'
   import { Link } from 'react-router-dom';
-  import { Card, Button, Radio } from 'semantic-ui-react';
+  import { Card, Button } from 'semantic-ui-react';
 
   import './CardPages.styles.scss'
 

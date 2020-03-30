@@ -5,7 +5,7 @@
 import React, { useState, useEffect} from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom';
-import { Button, Container } from 'semantic-ui-react'
+// import { Button, Container } from 'semantic-ui-react'
 
 import './card.styles.scss'
 
@@ -43,8 +43,8 @@ const Card = (props) => {
         {cards.map( card =>{
           if (showCard === true){
             return(
-           <Link className='noStyling' to={`/groups/${groupID}/cards/${card.id}`} onClick={handleClick2}>
-          <div className="card" key={`card-${card.id}`}>
+           <Link key={`card-${card.id}`} className='noStyling' to={`/groups/${groupID}/cards/${card.id}`} onClick={handleClick2}>
+          <div className="card" >
             <div className="container">
               <h1> {card.score} </h1>
             </div>

@@ -21,7 +21,7 @@ Group.create(name: 'React 101')
 
       Group.first.cards.create(
       question: ' React 102?',
-      correctAnswer: 'React 102',
+      correctAnswer: 'React 2',
       answer1: 'Test1',
       answer2: 'Test2',
       answer3: 'React 2',
@@ -31,7 +31,7 @@ Group.create(name: 'React 101')
       
       Group.first.cards.create(
         question: ' React 102?',
-        correctAnswer: 'React 102',
+        correctAnswer: 'React 2',
         answer1: 'Test1',
         answer2: 'Test2',
         answer3: 'React 2',
@@ -41,7 +41,7 @@ Group.create(name: 'React 101')
 
       Group.first.cards.create(
         question: ' React 102?',
-        correctAnswer: 'React 102',
+        correctAnswer: 'React 2',
         answer1: 'Test1',
         answer2: 'Test2',
         answer3: 'React 2',
@@ -51,7 +51,7 @@ Group.create(name: 'React 101')
 
     Group.first.cards.create(
       question: ' React 102?',
-      correctAnswer: 'React 102',
+      correctAnswer: 'React 2',
       answer1: 'Test1',
       answer2: 'Test2',
       answer3: 'React 2',
